@@ -12,10 +12,6 @@
 
 namespace Fuel\Core;
 
-if (!defined('E_STRICT')) {
-    define('E_STRICT', 2048);
-}
-
 /**
  * Exception class for standard PHP errors, this will make them catchable
  */
@@ -73,7 +69,7 @@ class Errorhandler
 		E_USER_ERROR        => 'User Error',
 		E_USER_WARNING      => 'User Warning',
 		E_USER_NOTICE       => 'User Notice',
-		(defined('E_STRICT') ? E_STRICT : 2048) => 'Runtime Notice',
+		E_STRICT            => 'Runtime Notice',
 		E_RECOVERABLE_ERROR => 'Runtime Recoverable error',
 		E_DEPRECATED        => 'Runtime Deprecated code usage',
 		E_USER_DEPRECATED   => 'User Deprecated code usage',
