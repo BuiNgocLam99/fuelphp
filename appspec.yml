@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /var/www/fuelphp/releases/tmp
+
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      runas: root
+
+  AfterInstall:
+    - location: scripts/deploy_release.sh
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/restart_services.sh
+      runas: root
