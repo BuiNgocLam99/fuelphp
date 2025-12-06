@@ -36,10 +36,6 @@
             "{$name}": ["fuel/docs"]
         }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "php oil r install"
-        ]
-    },
+    "scripts": {},
     "minimum-stability": "stable"
 }
