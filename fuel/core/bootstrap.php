@@ -10,6 +10,10 @@
  * @link       https://fuelphp.com
  */
 
+if (!defined('E_STRICT')) {
+    define('E_STRICT', 2048);
+}
+
 define('DS', DIRECTORY_SEPARATOR);
 define('CRLF', chr(13).chr(10));
 
